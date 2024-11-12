@@ -2,6 +2,8 @@
 ## Title: HCQuest
 ## Author: Grylls
 ## Notes: Adds HC warning messages for PvP and difficult quests to the quest frame.
+## Title-zhCN:|CFF33AAFF[辅助]|RHC任务警告
+## Notes-zhCN:|CFF33AAFFHCQuest|R|N在任务框中增加了PvP和困难任务的HC警告信息。
 ## Version: 1
 
 HCQuest.lua

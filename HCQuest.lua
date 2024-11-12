@@ -31,9 +31,9 @@ end
 
 function HCQuest:questPVP(table)
     if table.pvp then
-        return "Attacking "..table.pvp.." will flag you for PvP."
+        return "Attacking "..table.pvp.." 会让你触发PVP."
     else
-        return "No information available."
+        return "暂无信息."
     end
 end
 
@@ -113,10 +113,10 @@ function HCQuest:questDetail()
         local qtype = HCQuest:questType(HCQuest.pvpQuest)
         if qtype == "pvp" then
             QuestFrameDetailPanel.pvp.icon:SetTexture(HCQuest.iconpvp)
-            QuestFrameDetailPanel.pvp.text:SetText("PvP Quest")
+            QuestFrameDetailPanel.pvp.text:SetText("PvP 任务")
         elseif qtype == "warn" then
             QuestFrameDetailPanel.pvp.icon:SetTexture(HCQuest.iconwarn)
-            QuestFrameDetailPanel.pvp.text:SetText(" Warning")
+            QuestFrameDetailPanel.pvp.text:SetText(" 警告")
         end
         QuestFrameDetailPanel.pvp:Show()
         QuestFrameAcceptButton:SetTextColor(1, .25, 0)        
@@ -140,7 +140,7 @@ HCQuest:SetScript("OnEvent", function()
     if event == "ADDON_LOADED" then
         if not this.loaded then
             this.loaded = true
-            DEFAULT_CHAT_FRAME:AddMessage("HCQuest Loaded!", 1, 0.5, 0)
+            DEFAULT_CHAT_FRAME:AddMessage("HC任务加载!", 1, 0.5, 0)
         end    
     elseif event == "PLAYER_ENTERING_WORLD" then
         if not this.login then
